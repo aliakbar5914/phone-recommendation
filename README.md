@@ -2,7 +2,7 @@
 
 > A smart smartphone exploration and comparison platform — not an e-commerce store.
 
-PhoneFinder helps users discover the right phone through a lifestyle-based survey, advanced filtering, side-by-side comparison, and a personal shortlist. Administrators manage the catalog, users, and gain insights through a dedicated analytics console.
+PhoneRecommendation helps users discover the right phone through a lifestyle-based survey, advanced filtering, side-by-side comparison, and a personal shortlist. Administrators manage the catalog, users, and gain insights through a dedicated analytics console.
 
 ---
 
