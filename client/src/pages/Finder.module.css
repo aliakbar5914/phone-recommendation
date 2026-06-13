@@ -1,0 +1,253 @@
+.header { margin-bottom: 36px; }
+.title { font-size: 32px; font-weight: 800; letter-spacing: -1px; margin-bottom: 8px; }
+.sub { font-size: 14px; color: var(--muted); line-height: 1.6; }
+.quizLink { font-size: 13px; color: var(--muted); margin-top: 8px; }
+
+.filterShell {
+  display: grid;
+  grid-template-columns: 1fr 270px;
+  gap: 16px;
+  margin-bottom: 36px;
+  align-items: start;
+}
+.filterMain { display: flex; flex-direction: column; gap: 10px; }
+
+/* Search */
+.searchBar {
+  display: flex; align-items: center; gap: 12px;
+  background: var(--surface2);
+  border: 1px solid var(--border2);
+  border-radius: 12px;
+  padding: 14px 18px;
+  transition: border-color .2s, box-shadow .2s;
+}
+.searchBar:focus-within {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(129,140,248,0.1);
+}
+.searchBar svg { color: var(--muted); flex-shrink: 0; }
+.searchBar input {
+  flex: 1; background: none; border: none; outline: none;
+  color: var(--text); font-size: 14px; font-family: 'Inter', sans-serif;
+}
+.searchBar input::placeholder { color: var(--muted); }
+
+/* Use cases */
+.ucRow { display: flex; gap: 8px; }
+.ucTile {
+  flex: 1; display: flex; align-items: center; gap: 8px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 11px 14px;
+  cursor: pointer; white-space: nowrap;
+  transition: all .18s;
+  color: var(--text);
+}
+.ucTile:hover { background: var(--surface2); border-color: var(--border2); }
+.ucTile.active {
+  background: var(--accent-dim);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px rgba(129,140,248,0.2);
+}
+.ucIcon {
+  width: 16px; height: 16px;
+  stroke: var(--muted); fill: none;
+  stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round;
+  flex-shrink: 0; transition: stroke .18s;
+}
+.ucTile.active .ucIcon { stroke: var(--accent); }
+.ucLabel { font-size: 12px; color: var(--muted); font-weight: 500; transition: color .18s; }
+.ucTile.active .ucLabel { color: var(--text); }
+
+/* Filter rows */
+.filterRow {
+  display: flex; align-items: center; gap: 10px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 14px;
+  flex-wrap: wrap;
+}
+.filterRowLabel {
+  font-size: 10px; font-weight: 700; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--muted);
+  width: 48px; flex-shrink: 0;
+}
+.pills { display: flex; gap: 6px; flex-wrap: wrap; }
+.pill {
+  border: 1px solid var(--border2);
+  border-radius: 100px;
+  padding: 5px 12px;
+  font-size: 12px; font-weight: 500;
+  color: var(--muted2);
+  cursor: pointer;
+  transition: all .15s;
+  background: none;
+}
+.pill:hover { border-color: rgba(129,140,248,0.4); color: var(--text); }
+.pillActive { background: var(--accent-dim); border-color: var(--accent); color: var(--accent); }
+
+/* Sidebar */
+.sidebar {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px;
+}
+.sidebarLabel { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
+.priceDisplay { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 18px; }
+.priceVal { font-size: 22px; font-weight: 800; letter-spacing: -1px; }
+.priceMax { font-size: 13px; color: var(--muted); }
+.rangeTrack { position: relative; height: 3px; background: rgba(255,255,255,0.1); border-radius: 2px; margin-bottom: 22px; }
+.rangeFill { position: absolute; left: 0; top: 0; height: 100%; background: var(--accent); border-radius: 2px; }
+.rangeTrack input[type=range] {
+  -webkit-appearance: none; width: 100%; background: transparent;
+  position: absolute; top: 50%; transform: translateY(-50%); margin: 0; cursor: pointer;
+}
+.rangeTrack input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none; width: 16px; height: 16px; border-radius: 50%;
+  background: var(--accent); border: 2px solid #0A0A0F;
+  box-shadow: 0 0 8px rgba(129,140,248,0.5);
+}
+.rangeTrack input[type=range]::-webkit-slider-runnable-track { background: transparent; }
+
+.presets { display: flex; flex-direction: column; gap: 5px; }
+.preset {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 8px 10px; border-radius: 8px; cursor: pointer;
+  transition: background .15s; border: 1px solid transparent;
+  background: none; width: 100%;
+}
+.preset:hover { background: var(--surface2); }
+.presetActive { background: var(--accent-dim); border-color: rgba(129,140,248,0.2); }
+.presetName { font-size: 12px; font-weight: 500; color: var(--muted2); }
+.presetActive .presetName { color: var(--text); }
+.presetRange { font-size: 11px; color: var(--muted); }
+.presetActive .presetRange { color: var(--accent); }
+
+/* Results */
+.resultsHeader { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+.resultsLabel {
+  font-size: 11px; font-weight: 700; letter-spacing: 2.5px;
+  text-transform: uppercase; color: var(--muted);
+  display: flex; align-items: center; gap: 8px;
+}
+.resultsLabel::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
+
+.cardsRow { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; align-items: start; }
+
+/* Skeleton */
+.skeleton {
+  height: 300px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+@keyframes shimmer { 0%,100%{opacity:.4} 50%{opacity:.7} }
+
+/* Empty */
+.empty { grid-column: 1/-1; text-align: center; color: var(--muted); padding: 60px 20px; }
+.emptyIcon { font-size: 36px; margin-bottom: 12px; }
+.empty p { font-size: 14px; line-height: 1.6; }
+
+/* Cards */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform .2s, box-shadow .2s, border-color .2s;
+}
+.card:hover { transform: translateY(-3px); box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+.cardTop {
+  border-color: rgba(129,140,248,0.28);
+  box-shadow: 0 0 40px rgba(129,140,248,0.07);
+}
+.cardTop:hover { box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 40px rgba(129,140,248,0.12); }
+
+.cardBand { height: 90px; position: relative; overflow: hidden; }
+.bandBg { position: absolute; inset: 0; background: #0c0c18; }
+.orb { position: absolute; border-radius: 50%; filter: blur(28px); }
+.bandBadge {
+  position: absolute; top: 10px; left: 12px;
+  font-size: 9px; font-weight: 700; letter-spacing: 1.5px;
+  text-transform: uppercase; padding: 4px 10px; border-radius: 100px;
+  backdrop-filter: blur(8px);
+}
+.badgeGold { background: rgba(129,140,248,0.2); color: var(--accent); border: 1px solid rgba(129,140,248,0.3); }
+.badgeSilver { background: rgba(255,255,255,0.06); color: var(--muted2); border: 1px solid var(--border2); }
+.bandRank { position: absolute; bottom: 10px; right: 12px; font-size: 28px; font-weight: 900; color: rgba(255,255,255,0.06); letter-spacing: -2px; }
+
+.cardBody { padding: 16px 18px 18px; }
+.cardBrand { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 3px; }
+.cardName { font-size: 17px; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 4px; line-height: 1.2; }
+.cardMeta { font-size: 13px; color: var(--muted); margin-bottom: 14px; }
+.cardMeta strong { color: var(--muted2); font-weight: 600; }
+
+.cardActions { display: flex; gap: 7px; }
+.btnDetails {
+  flex: 1; padding: 9px 0;
+  border: 1px solid var(--border2); border-radius: 9px;
+  background: none; color: var(--muted2);
+  font-size: 12px; font-weight: 600;
+  transition: all .18s; display: flex; align-items: center; justify-content: center;
+}
+.btnDetails:hover { background: var(--surface2); color: var(--text); border-color: rgba(255,255,255,0.15); }
+.btnDetailsTop { border-color: rgba(129,140,248,0.3); color: var(--accent); }
+.btnDetailsTop:hover { background: var(--accent-dim); border-color: var(--accent); }
+
+.btnIcon {
+  width: 34px; height: 34px;
+  border: 1px solid var(--border2); border-radius: 9px;
+  background: none; cursor: pointer;
+  transition: all .18s; display: flex; align-items: center; justify-content: center;
+  color: var(--muted);
+}
+.btnIcon:hover { background: var(--surface2); color: var(--text); }
+.btnIconActive { background: var(--accent-dim); border-color: var(--accent); color: var(--accent); }
+.btnIconSaved { border-color: var(--accent); }
+
+/* Pagination */
+.pagination { display: flex; justify-content: center; gap: 6px; margin-top: 32px; }
+.pageBtn {
+  width: 36px; height: 36px; border-radius: 8px;
+  background: var(--surface); border: 1px solid var(--border);
+  color: var(--muted2); font-size: 13px; font-weight: 600;
+  cursor: pointer; transition: all .15s;
+}
+.pageBtn:hover { border-color: var(--border2); color: var(--text); }
+.pageBtnActive { background: var(--accent-dim); border-color: var(--accent); color: var(--accent); }
+
+/* Compare bar */
+.compareBar {
+  position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
+  display: flex; align-items: center; gap: 14px;
+  background: #13131A; border: 1px solid var(--border2);
+  border-radius: 100px; padding: 12px 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  z-index: 50; white-space: nowrap;
+  animation: slideUp .2s ease;
+}
+@keyframes slideUp { from { transform: translateX(-50%) translateY(20px); opacity: 0; } }
+.compareBarText { font-size: 13px; color: var(--muted2); }
+.compareBarText strong { color: var(--text); font-weight: 700; }
+.compareBtn {
+  background: var(--accent); color: #fff; border: none;
+  border-radius: 100px; padding: 8px 18px;
+  font-size: 12px; font-weight: 600;
+  transition: box-shadow .2s;
+}
+.compareBtn:hover { box-shadow: 0 0 16px var(--accent-glow); }
+.clearCompare { background: none; border: none; color: var(--muted); font-size: 12px; cursor: pointer; }
+.clearCompare:hover { color: var(--text); }
+
+@media (max-width: 1024px) { .cardsRow { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 768px) {
+  .filterShell { grid-template-columns: 1fr; }
+  .ucRow { flex-wrap: wrap; }
+  .ucTile { flex: 0 0 calc(33% - 6px); }
+  .cardsRow { grid-template-columns: 1fr; }
+}

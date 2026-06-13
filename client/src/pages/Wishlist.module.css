@@ -1,0 +1,57 @@
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.skeleton { height: 180px; background: var(--surface); border-radius: 14px; animation: shimmer 1.5s ease-in-out infinite; }
+@keyframes shimmer { 0%,100%{opacity:.4} 50%{opacity:.7} }
+
+.empty { text-align: center; padding: 60px 20px; }
+.empty h2 { font-size: 22px; font-weight: 800; margin-bottom: 8px; }
+.empty p { color: var(--muted); font-size: 14px; }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex; flex-direction: column; gap: 16px;
+  transition: border-color .2s;
+}
+.card:hover { border-color: var(--border2); }
+
+.cardTop { display: flex; justify-content: space-between; align-items: flex-start; }
+.brand { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+.name { font-size: 17px; font-weight: 800; letter-spacing: -0.3px; margin-bottom: 6px; }
+.meta { font-size: 13px; color: var(--muted2); }
+.removeBtn {
+  width: 28px; height: 28px; border-radius: 7px;
+  background: none; border: 1px solid var(--border2);
+  color: var(--muted); cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; transition: all .15s;
+}
+.removeBtn:hover { background: rgba(248,113,113,0.1); border-color: rgba(248,113,113,0.3); color: var(--danger); }
+
+.actions { display: flex; gap: 8px; }
+.detailBtn {
+  flex: 1; padding: 9px 0;
+  border: 1px solid var(--border2); border-radius: 8px;
+  background: none; color: var(--muted2);
+  font-size: 12px; font-weight: 600; text-align: center;
+  transition: all .18s;
+}
+.detailBtn:hover { background: var(--surface2); color: var(--text); }
+.compareBtn {
+  padding: 9px 14px; border: 1px solid var(--border2); border-radius: 8px;
+  background: none; color: var(--muted2); font-size: 12px; font-weight: 600;
+  cursor: pointer; transition: all .18s; white-space: nowrap;
+}
+.compareBtn:hover { border-color: rgba(129,140,248,0.4); color: var(--text); }
+.compareBtnActive { background: var(--accent-dim); border-color: var(--accent); color: var(--accent); }
+
+.compareBar {
+  position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
+  display: flex; align-items: center; gap: 14px;
+  background: #13131A; border: 1px solid var(--border2);
+  border-radius: 100px; padding: 12px 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6); z-index: 50;
+}
+
+@media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }

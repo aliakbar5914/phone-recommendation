@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Icon: motorola
+  Set: File Icons
+  Author: John Gardner (https://github.com/file-icons/icons)
+  License: ISC (https://github.com/file-icons/icons/blob/master/LICENSE.md)
+  Source: https://iconify.design
+-->
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 512 512"
+     width="512"
+     height="512">
+  <title>Motorola Logo Icon</title>
+  <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+             xmlns:dc="http://purl.org/dc/elements/1.1/"
+             xmlns:cc="http://creativecommons.org/ns#">
+      <cc:Work rdf:about="">
+        <dc:title>Motorola Logo Icon</dc:title>
+        <dc:description>A stylized letter &quot;M&quot; logo representing the Motorola brand, suitable for use in technology, electronics, or telecommunications contexts.</dc:description>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>John Gardner</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:source>https://github.com/file-icons/icons</dc:source>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>John Gardner</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <cc:license rdf:resource="https://github.com/file-icons/icons/blob/master/LICENSE.md"/>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>Motorola</rdf:li>
+            <rdf:li>logo</rdf:li>
+            <rdf:li>icon</rdf:li>
+            <rdf:li>technology</rdf:li>
+            <rdf:li>electronics</rdf:li>
+            <rdf:li>telecommunications</rdf:li>
+            <rdf:li>brand</rdf:li>
+            <rdf:li>symbol</rdf:li>
+            <rdf:li>letter-M</rdf:li>
+            <rdf:li>stylized</rdf:li>
+            <rdf:li>corporate</rdf:li>
+            <rdf:li>identity</rdf:li>
+            <rdf:li>graphic</rdf:li>
+            <rdf:li>design</rdf:li>
+            <rdf:li>emblem</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License rdf:about="https://github.com/file-icons/icons/blob/master/LICENSE.md">
+        <dc:title>ISC (ISC)</dc:title>
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <path fill="currentColor" d="M127.711 477.547c-170.281-98.17-170.281-344.925 0-443.094S512 59.662 512 256S297.993 575.716 127.711 477.547m283.12-93.733h17.729L330.805 64.118l-74.682 250.213L181.45 64.12L83.76 383.61h17.983c6.682-26.065 14.122-51.488 24.915-74.287c13.935-30.069 31.707-44.378 53.49-46.324c29.306-2.619 52.662 28.031 75.933 83.215c23.88-54.255 45.239-84.508 74.392-83.215c26.491 1.175 45.624 19.96 61.53 61.499c6.929 19.539 12.718 39.484 18.83 59.315"/>
+</svg>

@@ -1,0 +1,100 @@
+.detail { padding: 100px 0 80px; }
+.container { max-width: 960px; margin: 0 auto; padding: 0 32px; }
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 28px;
+  font-size: 13px;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.18s;
+}
+.back:hover { color: var(--accent); }
+
+/* Hero */
+.hero { display: flex; gap: 32px; margin-bottom: 56px; align-items: flex-start; }
+
+.imageArea {
+  width: 200px;
+  height: 200px;
+  flex-shrink: 0;
+  border-radius: 24px;
+  background: var(--surface2);
+  border: 1px solid var(--border2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroInfo { flex: 1; }
+
+.brandRow { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+.brand { font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 2px; }
+.tier { padding: 3px 10px; border-radius: 100px; font-size: 11px; font-weight: 700; }
+
+.phoneName { font-size: 28px; font-weight: 900; letter-spacing: -0.5px; margin-bottom: 8px; line-height: 1.15; }
+
+.price { font-size: 22px; font-weight: 800; color: var(--success); margin-bottom: 14px; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px; }
+
+.actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.actions .btn { display: inline-flex; align-items: center; gap: 7px; }
+.actions .btn svg { width: 14px; height: 14px; }
+
+/* Spec sections */
+.specs { display: flex; flex-direction: column; gap: 16px; }
+
+.specSection {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.specTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface2);
+  letter-spacing: 0.5px;
+}
+
+.specTitleIcon {
+  display: flex;
+  align-items: center;
+  color: var(--accent);
+}
+.specTitleIcon svg { width: 15px; height: 15px; }
+
+.specTable { padding: 4px 0; }
+
+.specRow {
+  display: flex;
+  padding: 10px 20px;
+  gap: 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  transition: background 0.15s;
+}
+.specRow:hover { background: rgba(255,255,255,0.02); }
+.specRow:last-child { border-bottom: none; }
+
+.specLabel { width: 160px; flex-shrink: 0; font-size: 12px; color: var(--muted); font-weight: 500; }
+.specValue { font-size: 12px; color: var(--muted2); word-break: break-word; }
+
+@media (max-width: 768px) {
+  .detail { padding: 80px 0 60px; }
+  .container { padding: 0 20px; }
+  .hero { flex-direction: column; align-items: center; text-align: center; }
+  .imageArea { width: 160px; height: 160px; }
+  .brandRow { justify-content: center; }
+  .actions { justify-content: center; }
+  .specRow { flex-direction: column; gap: 4px; }
+  .specLabel { width: auto; }
+}

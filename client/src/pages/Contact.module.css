@@ -1,0 +1,92 @@
+.contact {
+  padding: 48px 0 80px;
+}
+
+.container {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border2);
+  border-radius: var(--radius-xl);
+  padding: 32px;
+  box-shadow: var(--shadow-md);
+  backdrop-filter: blur(12px);
+  animation: fadeIn 0.4s ease-out;
+}
+
+.card :global(.form-group) {
+  margin-bottom: 18px;
+}
+
+.card :global(.form-group label) {
+  color: var(--muted2);
+}
+
+.submitBtn {
+  width: 100%;
+  min-height: 48px;
+  margin-top: 4px;
+}
+
+.successCard {
+  background: var(--surface);
+  border: 1px solid var(--border2);
+  border-radius: var(--radius-xl);
+  padding: 40px 32px;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  backdrop-filter: blur(12px);
+  animation: fadeIn 0.4s ease-out;
+}
+
+.successIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(74, 222, 128, 0.12);
+  border: 1px solid rgba(74, 222, 128, 0.28);
+  margin-bottom: 14px;
+}
+
+.successIcon::before {
+  content: '';
+  width: 22px;
+  height: 12px;
+  border-left: 3px solid var(--success);
+  border-bottom: 3px solid var(--success);
+  transform: rotate(-45deg) translate(1px, -1px);
+}
+
+.successCard h2 {
+  margin: 0 0 8px;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.successCard p {
+  color: var(--muted2);
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+@media (max-width: 520px) {
+  .contact {
+    padding: 32px 0 56px;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .card,
+  .successCard {
+    padding: 28px 22px;
+  }
+}
